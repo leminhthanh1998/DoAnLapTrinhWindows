@@ -1,0 +1,54 @@
+﻿<local:BasePage x:Class="LapTrinhWindows.Nhom3.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LapTrinhWindows.Nhom3"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="700"
+      Title="LoginPage">
+    
+    <Border Background="{StaticResource BlueBrush}">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource="/Images/Background/emoji-background.png"/>
+            </Grid.Background>
+            <!--Trang chinh-->
+            <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                          VerticalScrollBarVisibility="Auto">
+                <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            TextBlock.TextAlignment="Center">
+                    <Border Background="{StaticResource ForegroundLightBrush}"
+                                CornerRadius="10"
+                                Padding="15 50 15 15"
+                                Width="330"
+                                Margin="50 50 50 0">
+                        <StackPanel>
+                            <!--dang nhap-->
+                            <TextBlock Text="Đăng nhập"
+                                           FontFamily="{StaticResource LatoRegular}"
+                                           FontSize="{StaticResource FontSizeRegular}"
+                                           Foreground="{StaticResource BlueBrush}"/>
+                            <TextBlock Text="Chỉ dành cho nhân viên!"
+                                           FontFamily="{StaticResource LatoRegular}"
+                                           FontSize="{StaticResource FontSizeRegular}"
+                                           Foreground="{StaticResource ForegroundDarkBrush}"
+                                           Margin="0 0 0 20"/>
+                            <!--Textbox email-->
+                            <TextBox Style="{StaticResource StyleTextboxEmail}"/>
+                            <!--Textbox password-->
+                            <PasswordBox x:Name="PasswordText"
+                                             Margin="0 0 0 30"
+                                         Style="{StaticResource StylePasswordBox}"/>
+                            <!--Button dang nhap-->
+                            <Button Content="Đăng nhập!" HorizontalAlignment="Center" Style="{StaticResource LoginButtonStyle}" />
+                        </StackPanel>
+
+                    </Border>
+                    <Button Content="Tui là khách hàng!" HorizontalAlignment="Center" Style="{StaticResource KhachHangButtonStyle}"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+</local:BasePage>
