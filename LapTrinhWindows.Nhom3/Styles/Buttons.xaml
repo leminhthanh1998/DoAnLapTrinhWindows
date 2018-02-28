@@ -7,7 +7,7 @@
     </ResourceDictionary.MergedDictionaries>
     <!--Style cho button dang nhap-->
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}" x:Key="LoginButtonStyle">
-        <Setter Property="Background" Value="{StaticResource OrangeBrush}"/>
+        <Setter Property="Background" Value="{StaticResource RedBrush}"/>
         <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontFamily" Value="{StaticResource LatoRegular}"/>
@@ -39,7 +39,7 @@
                         <EventTrigger RoutedEvent="MouseLeave">
                             <BeginStoryboard>
                                 <Storyboard>
-                                    <ColorAnimation To="{StaticResource ColorOrange}" Duration="0:0:0.3" Storyboard.TargetName="border" Storyboard.TargetProperty="Background.Color"/>
+                                    <ColorAnimation To="{StaticResource ColorRed}" Duration="0:0:0.3" Storyboard.TargetName="border" Storyboard.TargetProperty="Background.Color"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
@@ -77,7 +77,7 @@
                     <!--Doi mau button khi chuot over-->
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="{StaticResource OrangeBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource RedBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
